@@ -23,7 +23,7 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:27.0.1-jre'
-
+  	compile 'org.projectlombok:lombok:1.18.6'
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }
