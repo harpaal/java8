@@ -1,6 +1,7 @@
 package com.hpst.java8;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -34,4 +35,14 @@ public class TestDishStream {
 		dishList.stream().forEach(dish->log.info(dish.getType() + "::"+ dish.getName()));
 		assertEquals(2, dishList.size());
 	}
+	
+	@Test
+	public void testMap() {
+		List<Integer> distNameWordCountList= menuList.stream()
+											.map(Dish::getName)
+											.map(String::length)
+											.collect(Collectors.toList());
+		log.info(""+distNameWordCountList);
+	}
+
 }
